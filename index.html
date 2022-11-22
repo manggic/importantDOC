@@ -5,41 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-
     <style>
-      #center::before{
-           content: '<h1>hello</>';
-           color: aqua;
-      }
+       body {
+         background-color: bisque;
+       }
+       .box {
+         width: 200px;
+         height: 200px;
+         border: 1px solid green;
+         margin: 0 auto;
+         margin-top: 100px;
+       }
+
+       .btn {
+         padding: 8px;
+         margin: 20px auto;
+         /* background-color: rgb(130, 255, 105); */
+         display: block;
+       }
+       h1{
+         text-align: center;
+         padding-top: 30px;
+       }
+      
     </style>
   </head>
   <body>
-    <h1>hey Learning HTML LOL!!</h1>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, sunt
-      officia, consequuntur nisi, similique pariatur ducimus tenetur minus a
-      illo enim <del>deleting</del> <mark>marking</mark> perspiciatis quae
-      culpa.
-    </p>
 
-    <pre>
-        line 1
+    <h1> Random Color Generator</h1>
+    <div id="boxId" class="box"></div>
 
-   +++++++
-        line 14
-    </pre>
-
-    <p id='center'  style="text-align: center;font-weight: bold;color:rgb(26, 7, 7)" >center</p>
-
-    <address>
-      <a href="mailto:jim@rock.com">jim@rock.com</a><br>
-      <a title="tel:+13115552368" href="tel:+13115552368">(311) 555-2368</a>
-    </address>
+    <button id="butn" class="btn">Change Me</button>
   </body>
 
   <script>
+    function generateRandomNo() {
+      return Math.floor(Math.random() * 255);
+    }
+    document.getElementById("butn").addEventListener("click", () => {
+      console.log("helllo");
 
-    document.getElementById('center').style.b
+      let val1 = generateRandomNo();
+      let val2 = generateRandomNo();
+      let val3 = generateRandomNo();
+      document.getElementById(
+        "boxId"
+      ).style.background = `rgb(${val1},${val2},${val3})`;
+    });
   </script>
 </html>
