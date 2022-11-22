@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Random Color Generator</title>
     <style>
       body {
         background-color: bisque;
@@ -27,13 +27,38 @@
         text-align: center;
         padding-top: 30px;
       }
+
+      .button-34 {
+        background: #5e5df0;
+        border-radius: 999px;
+        box-shadow: #5e5df0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+          NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+          EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto,
+          "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+      }
     </style>
   </head>
   <body>
-    <h1>Random Color Generator</h1>
+    <!-- <h1>Random Color Generator</h1> -->
     <div id="boxId" class="box"></div>
 
-    <button id="butn" class="btn">Change Me</button>
+    <button id="butn" class="btn button-34">Click Me</button>
   </body>
 
   <script>
@@ -41,14 +66,16 @@
       return Math.floor(Math.random() * 255);
     }
     document.getElementById("butn").addEventListener("click", () => {
-      console.log("helllo");
-
       let val1 = generateRandomNo();
       let val2 = generateRandomNo();
       let val3 = generateRandomNo();
       document.getElementById(
         "boxId"
       ).style.background = `rgb(${val1},${val2},${val3})`;
+
+      document.body.style.background = `rgb(${generateRandomNo()},${generateRandomNo()},${generateRandomNo()})`;
     });
   </script>
+
+  <script src="/script.js"></script>
 </html>
