@@ -1,5 +1,9 @@
 
 
+Timing : 1:10:25
+
+Youtube link : https://www.youtube.com/watch?v=rr9cI4u1_88
+
 Commands :
 
 * To pull image 
@@ -49,4 +53,5 @@ docker run --name mongoDB -p 4000:27017 -d mongo
 * For getting container logs 
 ```
 docker logs <container-name>
+docker logs <container-id>
 ```
