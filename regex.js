@@ -11,8 +11,12 @@
 // ca?t : matches -> cat,ct where a is optional 
 // \b : \b allows you to perform a "whole words only" search using a regular expression in the form of \bword\b. A "word character" is a character that can be used to form words.
 // \d : Match all numbers, character set [0-9]
+// h{1,4} : match h char between 1 to 4
+//  h{2} : match h char of length 2
 
-const str = 'ct' ||'catastrophe' ||'If the g flag is used, all results $#%^&*$@#matching the complete regular expression will be returned.'
+
+
+const str ='If the g flag is used, all results $#%^&*$@#matching the complete regular expression will be returned.'
 
 
 // remove space from string
@@ -29,5 +33,5 @@ let matchWordStartingWith = str.match(/\bre\w+/gi,'')
 
 
 
-console.log(str.match(/ca?t/gi));
+console.log(str.match(/ca{2}/gi));
 
