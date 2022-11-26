@@ -1,6 +1,6 @@
 
 
-Timing : 1:55:22
+Timing : 02:05:22
 
 Youtube link : https://www.youtube.com/watch?v=rr9cI4u1_88
 
@@ -46,7 +46,7 @@ docker run --name mongoDB -p 4000:27017 -d mongo
 
 * By using this we can run same image on diff port
 * 4000 is our port
-* 27017 is mongoDB port
+* 27017 is mongoDB(Image) port
 * -d stand for detach mode
 ```
 
@@ -77,4 +77,29 @@ both mongodb and mongo-server will be on same network
 * To bring compose down
 ```
 docker-compose -f <file-name> down
+```
+
+* Dockerfile
+```
+FROM python:3-alpine3.15
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
+EXPOSE 3000
+CMD python ./index.py
+```
+
+* To build Dockerfile
+```
+docker build -t manishofficial/hey-flask:latest .
+```
+
+* Create container
+```
+docker run -d -p 3000:3000 manishofficial/hey-flask:latest
+```
+
+* Push to docker hub
+```
+docker push manishofficial/hey-flask:latest
 ```
