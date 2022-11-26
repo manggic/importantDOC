@@ -65,3 +65,11 @@ docker network ls
 ```
 docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=example --name mongoDB -d mongo 
 ``` 
+
+* Docker compose command
+```
+docker-compose -f <file-name> up
+
+* In case of compose we don't need to provide network details as 
+both mongodb and mongo-server will be on same network
+```
