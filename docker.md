@@ -1,6 +1,6 @@
 
 
-Timing : 1:29:11
+Timing : 1:55:22
 
 Youtube link : https://www.youtube.com/watch?v=rr9cI4u1_88
 
@@ -72,4 +72,9 @@ docker-compose -f <file-name> up
 
 * In case of compose we don't need to provide network details as 
 both mongodb and mongo-server will be on same network
+```
+
+* To bring compose down
+```
+docker-compose -f <file-name> down
 ```
