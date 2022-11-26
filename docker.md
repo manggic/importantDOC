@@ -1,6 +1,6 @@
 
 
-Timing : 02:05:22
+Timing : 02:14:13
 
 Youtube link : https://www.youtube.com/watch?v=rr9cI4u1_88
 
@@ -40,7 +40,7 @@ docker container ls -a
  docker container prune
 ```
 
-* To run mongo in some port
+* To run mongo on some port
 ```
 docker run --name mongoDB -p 4000:27017 -d mongo
 
@@ -102,4 +102,9 @@ docker run -d -p 3000:3000 manishofficial/hey-flask:latest
 * Push to docker hub
 ```
 docker push manishofficial/hey-flask:latest
+```
+
+* To login into Docker acc through cmd
+```
+docker login
 ```
