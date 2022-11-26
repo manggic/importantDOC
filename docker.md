@@ -1,7 +1,4 @@
 
-
-Timing : 02:14:13
-
 Youtube link : https://www.youtube.com/watch?v=rr9cI4u1_88
 
 Commands :
