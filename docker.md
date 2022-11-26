@@ -1,6 +1,6 @@
 
 
-Timing : 1:11:57
+Timing : 1:29:11
 
 Youtube link : https://www.youtube.com/watch?v=rr9cI4u1_88
 
@@ -55,3 +55,13 @@ docker run --name mongoDB -p 4000:27017 -d mongo
 docker logs <container-name>
 docker logs <container-id>
 ```
+
+* For getting list of networks
+```
+docker network ls
+```
+
+* Running container with alias name mongoDB 
+```
+docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=example --name mongoDB -d mongo 
+``` 
