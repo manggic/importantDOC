@@ -89,12 +89,12 @@ EXPOSE 3000
 CMD python ./index.py
 ```
 
-* To build Dockerfile
+* To build Image based on Dockerfile
 ```
 docker build -t manishofficial/hey-flask:latest .
 ```
 
-* Create container
+* Create container ( Run an Image )
 ```
 docker run -d -p 3000:3000 manishofficial/hey-flask:latest
 ```
