@@ -1,6 +1,6 @@
 
 
-Emmet short-cuts
+## Emmet short-cuts
 
 * h1>p>span
 
@@ -61,5 +61,20 @@ Emmet short-cuts
 <p>miss2</p>
 ```
 
-Emmet cheat sheet
-* https://docs.emmet.io/cheat-sheet/
+## Emmet cheat sheet
+   * https://docs.emmet.io/cheat-sheet/
+
+
+
+
+## Info
+
+* pre : By using pre tag one can define code as it is 
+
+```
+ ******
+        ***
+           ****
+
+     ********
+```
