@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning form</title>
+
+    <style>
+      .one,
+      .two,
+      .three {
+        border: 1px solid green;
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">A</div>
+      <div class="two">B</div>
+      <div class="three">C</div>
+    </div>
+
+    <script>
+      let alreadyPressedKey = "";
+      document.onkeypress = function (evt) {
+        evt = evt || window.event;
+        var charCode = evt.keyCode || evt.which;
+        var charStr = String.fromCharCode(charCode);
+
+        if (alreadyPressedKey) {
+          document.getElementsByClassName(
+            alreadyPressedKey
+          )[0].style.background = "white";
+        }
+
+        switch (charStr) {
+          case "a":
+            document.getElementsByClassName("one")[0].style.background = "blue";
+            alreadyPressedKey = "one";
+            break;
+          case "b":
+            document.getElementsByClassName("two")[0].style.background =
+              "yellow";
+            alreadyPressedKey = "two";
+
+            break;
+          case "c":
+            document.getElementsByClassName("three")[0].style.background =
+              "green";
+            alreadyPressedKey = "three";
+
+            break;
+          default:
+            alert(`${charStr} key is pressed`);
+            break;
+        }
+      };
+    </script>
+  </body>
+</html>
