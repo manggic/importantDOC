@@ -83,3 +83,8 @@
 ```
 Lorem ipsum dolor sit amet.
 ```
+
+### generate random number between min & max
+```
+Math.floor(Math.random()* (max - min + 1)) + min 
+```
